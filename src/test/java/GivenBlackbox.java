@@ -101,8 +101,8 @@ public class GivenBlackbox {
         firstTest.set_points("cooper", 100);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
-        firstTestExpected.put("A", 3);
-        firstTestExpected.put("B", 0);
+        firstTestExpected.put("A", 1);
+        firstTestExpected.put("B", 2);
         firstTestExpected.put("C", 0);
         firstTestExpected.put("D", 0);
         firstTestExpected.put("F", 0);
@@ -127,11 +127,11 @@ public class GivenBlackbox {
         //Course variable for 3rd test (lower bound of each grade - boundary/edge-case test)
         thirdTest = createCourse("SER333");
         thirdTest.set_points("max3",100); //represents max
-        thirdTest.set_points("Buddy",90);
-        thirdTest.set_points("Lucky",80);
-        thirdTest.set_points("Julliete",70);
-        thirdTest.set_points("Marlie",60);
-        thirdTest.set_points("Casey",50);
+        thirdTest.set_points("Buddy",81);
+        thirdTest.set_points("Lucky",66);
+        thirdTest.set_points("Julliete",51);
+        thirdTest.set_points("Marlie",36);
+        thirdTest.set_points("Casey",0);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
         thirdTestExpected.put("A", 2);
@@ -146,10 +146,10 @@ public class GivenBlackbox {
         fourthTest = createCourse("SER444");
         fourthTest.set_points("max4",100); //represents max
         fourthTest.set_points("Bridget",100);
-        fourthTest.set_points("Anabella",89);
-        fourthTest.set_points("Rocko",79);
-        fourthTest.set_points("Connor",69);
-        fourthTest.set_points("Joe",59);
+        fourthTest.set_points("Anabella",79);
+        fourthTest.set_points("Rocko",65);
+        fourthTest.set_points("Connor",49);
+        fourthTest.set_points("Joe",35);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
         fourthTestExpected.put("A", 2);
@@ -164,16 +164,16 @@ public class GivenBlackbox {
         fifthTest = createCourse("SER555");
         fifthTest.set_points("Ethan",101); //too high - this will be considered max therefore not accounting for a perfect score and extra credit. (negativly impacts the score of others if included)
         fifthTest.set_points("Nana",-1); //to low
-        fifthTest.set_points("Thomas",90); //lower bound
-        fifthTest.set_points("Stacy",80);
-        fifthTest.set_points("Emmie",70);
-        fifthTest.set_points("Isaac",60);
-        fifthTest.set_points("Brenda",50);
+        fifthTest.set_points("Thomas",81); //lower bound
+        fifthTest.set_points("Stacy",66);
+        fifthTest.set_points("Emmie",51);
+        fifthTest.set_points("Isaac",36);
+        fifthTest.set_points("Brenda",0);
         fifthTest.set_points("Olivia",100); //upper bound
-        fifthTest.set_points("William",89);
-        fifthTest.set_points("Emmie",79);
-        fifthTest.set_points("Isaac",69);
-        fifthTest.set_points("Brenda",59);
+        fifthTest.set_points("William",79);
+        fifthTest.set_points("Emmie",65);
+        fifthTest.set_points("Isaac",49);
+        fifthTest.set_points("Brenda",35);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
         fifthTestExpected.put("A", 2);
@@ -184,11 +184,11 @@ public class GivenBlackbox {
         
         //-------------------------------------------------------------------------------------------------------------
 
-        //Course variable for 1st test (students w/ the same name)
+        //Course variable for 6th test (students w/ the same name)
         sixthTest = createCourse("SER666");
         sixthTest.set_points("max6",100); //represents max
         sixthTest.set_points("Abigail",95);
-        sixthTest.set_points("Abigail",86);
+        sixthTest.set_points("Abigail",76);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
         sixthTestExpected.put("A", 2);
@@ -207,10 +207,10 @@ public class GivenBlackbox {
         seventhTest.set_points("carlos", 70);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
-        seventhTestExpected.put("A", 1);
-        seventhTestExpected.put("B", 1);
-        seventhTestExpected.put("C", 0);
-        seventhTestExpected.put("D", 1);
+        seventhTestExpected.put("A", 2);
+        seventhTestExpected.put("B", 0);
+        seventhTestExpected.put("C", 1);
+        seventhTestExpected.put("D", 0);
         seventhTestExpected.put("F", 0);
         
         //-------------------------------------------------------------------------------------------------------------
@@ -223,8 +223,8 @@ public class GivenBlackbox {
         eighthTest.set_points("charles", 89);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
-        eighthTestExpected.put("A", 2);
-        eighthTestExpected.put("B", 1);
+        eighthTestExpected.put("A", 3);
+        eighthTestExpected.put("B", 0);
         eighthTestExpected.put("C", 0);
         eighthTestExpected.put("D", 0);
         eighthTestExpected.put("F", 0);
