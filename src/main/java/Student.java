@@ -3,6 +3,12 @@ package main.java;
 import java.awt.List;
 import java.util.ArrayList;
 
+//emun derived from the Major.class to change code smells (lazy class) defect.
+public enum Major {
+    SER, CS, IT; 
+
+} 
+
 /**
  * This is student class encapsulating all the details for a student.
  */
