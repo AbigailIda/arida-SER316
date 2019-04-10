@@ -20,14 +20,14 @@ public class Course {
 
 
     public Course(String name) { 
-        this.SetName(name);
+        this.setName(name);
     }
 
-    public String GetName() {
+    public String getName() {
         return Name;
     }
 
-    public void SetName(String name) {
+    public void setName(String name) {
         this.Name = name;
     }
     
@@ -103,7 +103,7 @@ public class Course {
     }
 
 
-    public HashMap<String, Integer> GetPoints(){
+    public HashMap<String, Integer> getPoints(){
         return points;
     }
     
