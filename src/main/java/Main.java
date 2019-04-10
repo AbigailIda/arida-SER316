@@ -37,7 +37,6 @@ public class Main {
         
         
         courses.get("SER315").printCourseStats();
-
      
     }
 }

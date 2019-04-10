@@ -14,24 +14,26 @@ import java.util.HashMap;
 
 public class Course {
     
-    public HashMap<String, Integer> points = new HashMap<>(); // maps student names (asurite) to their points
+    // maps student names (asurite) to their points
+    public HashMap<String, Integer> points = new HashMap<>(); 
     private String Name; // course name
     // Students should only be added when they are not yet in the course (names (asurite member) needs to be unique)
     ArrayList<Student> students  = new ArrayList<Student>();
 
 
-    public Course(String name){
-        this.SetName(name);
+    public Course(String name) { 
+        this.setName(name);
     }
 
-    public String GetName() {
+    public String getName() {
         return Name;
     }
 
-    public void SetName(String name) {
+    public void setName(String name) {
         this.Name = name;
     }
     
+<<<<<<< HEAD
     // REACH at least 95% Code coverage  (assign 3)
     // if student with the name (asurite member) is not yet included student needs to be added to student list 
     // sets points for a student 
@@ -75,51 +77,109 @@ public class Course {
     //form of a print statement to ensure the user understands the values collected and 
     //calls the calculateAverageWithoutMinWithoutMax() method to retrive the desired value 
     //and display it for the user. This method has no parameters and no return values. 
+=======
+    /**@javadoc this method prints course stats 
+     * 
+    */
+>>>>>>> StaticAnalysis
     public void printCourseStats() {
-       ArrayList<Integer> values = new ArrayList<Integer>(points.values());
+        ArrayList<Integer> values = new ArrayList<Integer>(points.values());
 
         System.out.print("Average Grades without max and without min: ");
         System.out.println(this.calculateAverageWithoutMinWithoutMax());
     }
     
+<<<<<<< HEAD
     // REACH at least 95% Code coverage (assign 3)
+=======
+    
+    /** @javadoc REACH at least 95% Code coverage (assign 3)
+>>>>>>> StaticAnalysis
     // method to draw node graph for
     // should throw null pointer for empty points member
     // negative points should be ignored
     // max value and min value should be removed - (if doubles then only the first occurrence)
-    // if just one or two values no values will be omitted
+    // if just one or two values no values will be omitted */
     public double calculateAverageWithoutMinWithoutMax() throws NullPointerException {
         ArrayList<Integer> collection = new ArrayList<Integer>(points.values());
         
-         int counter = 0;
-         int min = Integer.MAX_VALUE;
-         int max = Integer.MIN_VALUE;
-         if(collection.size() == 1)
+        int counter = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        if(collection.size() == 1) {
             return collection.get(0);
-        
-        else if(collection.size() == 2 ){
+        }
+        else if(collection.size() == 2 ) {
             return (double)(collection.get(0) + collection.get(1))/2;
         }
-        else {
+        else{
             int allPoints = 0;
-            for(int point: collection){
-                if (point >= 0) {
+            for(int point: collection) {
+                if (point >= 0){
                     
                     counter = counter++;
-                    if (point < min){
+                    if (point < min) {
                         min = point;
                     }
-                    if (point > max){
+                    if (point > max) {
                         max = point;
                     }
                     allPoints = allPoints + point;
                 }
-            }
             
+            }         
             int totalPoints = allPoints-max-min;
-                return totalPoints/(double)(counter-1); 
-
+            return totalPoints/(double)(counter-1); 
         }
     }
+<<<<<<< HEAD
+=======
+    
+    // REACH at least 95% Code coverage  (assign 3)
+    // if student with the name (asurite member) is not yet 
+    //included student needs to be added to student list 
+    // sets points for a student 
+    public void set_points(String name, int points){
+    	System.out.println(points);
+        this.points.put(name, points);
+    }
+    
+    /** 
+    // REACH at least 95% Code coverage  (assign 3)
+    // Students should only be added when they are not yet
+    // in the course (names (asurite member) needs to be unique)
+    */
+    ArrayList<Student> students  = new ArrayList<Student>();
+    public boolean addStudent(Student s){
+        students.add(s);
+        points.put(s.getAsurite(), -1);
+        return true;
+    }
+
+
+    public HashMap<String, Integer> getPoints(){
+        return points;
+    }
+    
+
+    public int getStudent_Points(String student){
+        return points.get(student);
+    }
+    
+    public int getStudent_Points(Student student){
+        return points.get(student.getAsurite());
+    }
+
+    
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
+    
+    public HashMap<String, Integer> countOccurencesLetterGrades() throws NullPointerException{
+     	return null;
+   
+    }
+  
+>>>>>>> StaticAnalysis
   
  }
