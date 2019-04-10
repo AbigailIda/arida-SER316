@@ -14,23 +14,26 @@ import java.util.HashMap;
 
 public class Course {
     
-    public HashMap<String, Integer> points = new HashMap<>(); // maps student names (asurite) to their points
+    // maps student names (asurite) to their points
+    public HashMap<String, Integer> points = new HashMap<>(); 
     private String Name; // course name
 
 
-    public Course(String name){ 
+    public Course(String name) { 
         this.SetName(name);
     }
 
-    public String GetName(){
+    public String GetName() {
         return Name;
     }
 
-    public void SetName(String name){
+    public void SetName(String name) {
         this.Name = name;
     }
     
-    /**@javadoc this method prints course stats */
+    /**@javadoc this method prints course stats 
+     * 
+    */
     public void printCourseStats() {
         ArrayList<Integer> values = new ArrayList<Integer>(points.values());
 
@@ -51,22 +54,22 @@ public class Course {
         int counter = 0;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        if(collection.size() == 1){
+        if(collection.size() == 1) {
             return collection.get(0);
         }
-        else if(collection.size() == 2 ){
+        else if(collection.size() == 2 ) {
             return (double)(collection.get(0) + collection.get(1))/2;
         }
         else{
             int allPoints = 0;
-            for(int point: collection){
+            for(int point: collection) {
                 if (point >= 0){
                     
                     counter = counter++;
-                    if (point < min){
+                    if (point < min) {
                         min = point;
                     }
-                    if (point > max){
+                    if (point > max) {
                         max = point;
                     }
                     allPoints = allPoints + point;
@@ -79,16 +82,19 @@ public class Course {
     }
     
     // REACH at least 95% Code coverage  (assign 3)
-    // if student with the name (asurite member) is not yet included student needs to be added to student list 
+    // if student with the name (asurite member) is not yet 
+    //included student needs to be added to student list 
     // sets points for a student 
     public void set_points(String name, int points){
     	System.out.println(points);
         this.points.put(name, points);
     }
     
-    
+    /** 
     // REACH at least 95% Code coverage  (assign 3)
-    // Students should only be added when they are not yet in the course (names (asurite member) needs to be unique)
+    // Students should only be added when they are not yet
+    // in the course (names (asurite member) needs to be unique)
+    */
     ArrayList<Student> students  = new ArrayList<Student>();
     public boolean addStudent(Student s){
         students.add(s);
